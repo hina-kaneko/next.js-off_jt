@@ -26,14 +26,16 @@ h1 {
   color: #333;
 }
 
-.hobby-row {
-  display: flex;
-  align-items: flex-start;
+.hobby-label {
+  margin: 0;
 }
 
 .hobby-list {
+  display: inline-block;
   margin: 0;
   padding-left: 20px;
+  list-style-type: disc;
+  vertical-align: top;
 }
 
 .sns-link {
