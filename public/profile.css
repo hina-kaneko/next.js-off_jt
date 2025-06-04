@@ -1,0 +1,54 @@
+body {
+  background-color: #fff0f5;
+}
+h1 {
+  color: gray;
+  font-size: 40px;
+}
+.profile-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdc6c68b; /* ← 背景色（薄いピンクなど）*/
+  padding: 40px; /* ← 中のコンテンツがボーダーにくっつかないように */
+  width: 80%;
+  margin: 40px auto; /* ← 画面中央に */
+}
+
+.profile-photo img {
+  width: 400px;
+  border-radius: 10px;
+  margin-right: 40px;
+}
+
+.profile-text {
+  flex: 1;
+  color: #333;
+}
+
+.hobby-label {
+  margin: 0;
+}
+
+.hobby-list {
+  display: inline-block;
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  vertical-align: top;
+}
+
+.sns-link {
+  margin-left: 140px; /* ← 調整量は見た目に合わせて */
+}
+
+.label {
+  display: inline-block;
+  width: 130px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-weight: bold;
+  margin-right: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
