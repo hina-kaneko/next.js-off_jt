@@ -1,5 +1,5 @@
 document.getElementById("complete").addEventListener("click", function () {
-  const name = document.getElementById("nameInput").value.trim();
+  const value = document.getElementById("nameInput").value.trim();
   const message = document.getElementById("message");
 
   if (value === "") {
