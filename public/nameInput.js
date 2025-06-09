@@ -1,4 +1,4 @@
-document.getElementById("complete").addEventListener("click", function () {
+const handleClick = () => {
   const value = document.getElementById("nameInput").value.trim();
   const message = document.getElementById("message");
 
@@ -7,4 +7,6 @@ document.getElementById("complete").addEventListener("click", function () {
   } else {
     message.innerText = `こんにちは、${value}さん！`;
   }
-});
+};
+
+document.getElementById("complete").addEventListener("click", handleClick);
