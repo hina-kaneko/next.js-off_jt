@@ -8,33 +8,48 @@ form.addEventListener("submit", (e) => {
   const job = document.getElementById("job");
   const selfIntro = document.getElementById("selfIntro");
 
+  //エラー表示用
+  const nameError = document.getElementById("nameError");
+  const ageErrorRequired = document.getElementById("ageErrorRequired");
+  const ageErrorUnderage = document.getElementById("ageErrorUnderage");
+  const jobError = document.getElementById("jobError");
+
+  let isFormValid = true;
+
+  nameError.style.display = "none";
+  ageErrorRequired.style.display = "none";
+  ageErrorUnderage.style.display = "none";
+  jobError.style.display = "none";
+
   //名前バリデーションチェック
   if (name.value === "") {
-    document.getElementById("nameError").style.display = "block";
-  } else {
-    document.getElementById("nameError").style.display = "none";
+    nameError.style.display = "block";
+    isFormValid = false;
   }
 
   //年齢バリデーションチェック
-  if (age.value < 18) {
-    document.getElementById("ageError").style.display = "block";
-  } else {
-    document.getElementById("ageError").style.display = "none";
+  if (age.value === "") {
+    ageErrorRequired.style.display = "block";
+    isFormValid = false;
+  } else if (age.value < 18) {
+    ageErrorUnderage.style.display = "block";
+    isFormValid = false;
   }
 
   //職業バリデーションチェック
   if (job.value === "") {
-    document.getElementById("jobError").style.display = "block";
-  } else {
-    document.getElementById("jobError").style.display = "none";
+    jobError.style.display = "block";
+    isFormValid = false;
   }
 
-  const data = {
-    name: name.value,
-    age: age.value,
-    job: job.value,
-    selfIntro: selfIntro.value,
-  };
+  if (isFormValid) {
+    const data = {
+      name: name.value,
+      age: age.value,
+      job: job.value,
+      selfIntro: selfIntro.value,
+    };
 
-  console.log("送信データ:", JSON.stringify(data, null, 2));
+    console.log("送信データ:", JSON.stringify(data, null, 2));
+  }
 });

@@ -1,7 +1,3 @@
-#message {
-  font-size: 15px;
-}
-
 #job {
   width: 200px;
   height: 25px;
@@ -12,7 +8,7 @@
   height: 80px;
 }
 
-#submit {
+#submitBtn {
   margin-top: 10px;
   margin-left: 160px;
 }

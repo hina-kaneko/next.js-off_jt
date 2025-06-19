@@ -27,7 +27,10 @@
           value=""
           placeholder="年齢を入力してください"
         />
-        <p id="ageError" style="color: red; display: none">
+        <p id="ageErrorRequired" style="color: red; display: none">
+          年齢を入力してください
+        </p>
+        <p id="ageErrorUnderage" style="color: red; display: none">
           年齢は18歳以上で入力してください
         </p>
       </div>
@@ -39,20 +42,18 @@
           <option value="engineer">エンジニア</option>
           <option value="sales">営業</option>
         </select>
-        <p id="jobError" style="color: red; display: none">入力が必要です</p>
+        <p id="jobError" style="color: red; display: none">選択が必要です</p>
       </div>
       <div>
         <label for="selfIntro">自己紹介（任意）</label>
         <div>
-          <input
-            type="text"
+          <textarea
             id="selfIntro"
-            value=""
             placeholder="自己紹介を入力してください"
-          />
+          ></textarea>
         </div>
       </div>
-      <button id="submit">送信</button>
+      <button id="submitBtn" type="submit">送信</button>
       <script src="form.js"></script>
     </form>
   </body>
