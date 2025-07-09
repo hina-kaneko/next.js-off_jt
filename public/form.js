@@ -6,50 +6,61 @@ form.addEventListener("submit", (e) => {
   const name = document.getElementById("name");
   const age = document.getElementById("age");
   const job = document.getElementById("job");
-  const selfIntro = document.getElementById("selfIntro");
+  //const selfIntro = document.getElementById("selfIntro");
 
-  //エラー表示用
-  const nameError = document.getElementById("nameError");
-  const ageErrorRequired = document.getElementById("ageErrorRequired");
-  const ageErrorUnderage = document.getElementById("ageErrorUnderage");
-  const jobError = document.getElementById("jobError");
+  //エラー表示
+  const errorMessages = {
+    nameRequired: "名前を入力してください",
+    ageRequired: "年齢を入力してください",
+    ageUnderage: "年齢は18歳以上で入力してください",
+    jobRequired: "職業を選択してください",
+  };
 
-  let isFormValid = true;
-
-  nameError.style.display = "none";
-  ageErrorRequired.style.display = "none";
-  ageErrorUnderage.style.display = "none";
-  jobError.style.display = "none";
+  // 既存のエラーを削除
+  for (const el of form.querySelectorAll(".error")) {
+    el.remove();
+  }
+  //let isFormValid = true;
 
   //名前バリデーションチェック
-  if (name.value === "") {
-    nameError.style.display = "block";
-    isFormValid = false;
+  if (name.value.trim() === "") {
+    createError(name, errorMessages.nameRequired);
+    //isFormValid = false;
   }
 
-  //年齢バリデーションチェック
-  if (age.value === "") {
-    ageErrorRequired.style.display = "block";
-    isFormValid = false;
-  } else if (age.value < 18) {
-    ageErrorUnderage.style.display = "block";
-    isFormValid = false;
+  //年齢バリデーションチェック;
+  const ageValue = age.value.trim();
+  if (ageValue === "") {
+    createError(age, errorMessages.ageRequired);
+    //isFormValid = false;
+  } else if (Number(ageValue) < 18) {
+    createError(age, errorMessages.ageUnderage);
+    //isFormValid = false;
   }
 
   //職業バリデーションチェック
-  if (job.value === "") {
-    jobError.style.display = "block";
-    isFormValid = false;
+  if (job.value.trim() === "none") {
+    createError(job, errorMessages.jobRequired);
+    //isFormValid = false;
   }
 
-  if (isFormValid) {
-    const data = {
-      name: name.value,
-      age: age.value,
-      job: job.value,
-      selfIntro: selfIntro.value,
-    };
+  // if (isFormValid) {
+  //   const data = {
+  //     name: name.value,
+  //     age: age.value,
+  //     job: job.value,
+  //     selfIntro: selfIntro.value,
+  //   };
 
-    console.log("送信データ:", JSON.stringify(data, null, 2));
-  }
+  //   console.log("送信データ:", JSON.stringify(data, null, 2));
+  // }
 });
+
+// エラー表示用関数
+const createError = (elem, errorMessage) => {
+  const errorSpan = document.createElement("span");
+  errorSpan.classList.add("error");
+  errorSpan.setAttribute("aria-live", "polite");
+  errorSpan.textContent = errorMessage;
+  elem.insertAdjacentElement("afterend", errorSpan);
+};
