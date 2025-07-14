@@ -1,9 +1,5 @@
-# this repository styleguide
+# スタイルガイド
 
-## Language
-
-All answers must be in Japanese.
-
-* Posts a code review in Japanese language.
-* Posts a summary in Japanese language.
-  
+すべての回答は日本語で行ってください。  
+コードレビューも日本語でお願いします。  
+レビューのまとめも日本語で書いてください。
