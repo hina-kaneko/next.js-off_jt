@@ -1,22 +1,8 @@
-# このリポジトリのコードレビュー方針（Gemini用）
+# this repository styleguide
 
-## 使用言語
+## Language
 
-Gemini Code Assist によるすべてのコードレビューコメント、および要約は、**日本語**で記述してください。
+All answers must be in Japanese.
 
-- 英語でのレビューは行わないでください。
-- わかりやすく丁寧な日本語でレビューを行ってください。
-- ビジネスにふさわしい口調で、プロフェッショナルな表現を心がけてください。
-
-## レビュー例
-
-❌ 英語でのレビュー（NG）:
-- This variable name is unclear. Please rename it.
-
-✅ 日本語でのレビュー（OK）:
-- この変数名は意味がわかりにくいため、より明確な名前に変更することをおすすめします。
-
-## スタイルガイドの目的
-
-このスタイルガイドは、Gemini Code Assist に対して、  
-コードレビューを実施する際に日本語を使用し、かつ一貫性のある表現でコメントを行うよう指示するためのものです。
+* Posts a code review in Japanese language.
+* Posts a summary in Japanese language.
