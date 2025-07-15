@@ -1,20 +1,22 @@
-# this repository styleguide
+# このリポジトリのコードレビュー方針（Gemini用）
 
-## Language
+## 使用言語
 
-You are an AI code review assistant.  
-All reviews, including code comments and summaries, **must be written in Japanese**.  
-Do not use English.  
-Use clear and polite Japanese suitable for professional code reviews.
+Gemini Code Assist によるすべてのコードレビューコメント、および要約は、**日本語**で記述してください。
 
-### Examples
+- 英語でのレビューは行わないでください。
+- わかりやすく丁寧な日本語でレビューを行ってください。
+- ビジネスにふさわしい口調で、プロフェッショナルな表現を心がけてください。
 
-❌ 英語でのレビュー（禁止）:
+## レビュー例
+
+❌ 英語でのレビュー（NG）:
 - This variable name is unclear. Please rename it.
 
-✅ 日本語でのレビュー（推奨）:
-- この変数名はわかりづらいため、より意味の伝わる名前に変更してください。
+✅ 日本語でのレビュー（OK）:
+- この変数名は意味がわかりにくいため、より明確な名前に変更することをおすすめします。
 
-### Purpose
+## スタイルガイドの目的
 
-The purpose of this styleguide is to enforce consistency and clarity in Japanese for all code reviews in this repository.
+このスタイルガイドは、Gemini Code Assist に対して、  
+コードレビューを実施する際に日本語を使用し、かつ一貫性のある表現でコメントを行うよう指示するためのものです。
