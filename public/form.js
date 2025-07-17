@@ -1,5 +1,5 @@
 const form = document.getElementById("surveyForm");
-form.addEventListener("submit", (e) => {
+const handleSubmit = (e) => {
   e.preventDefault();
 
   //入力値取得
@@ -54,7 +54,9 @@ form.addEventListener("submit", (e) => {
 
   //   console.log("送信データ:", JSON.stringify(data, null, 2));
   // }
-});
+};
+
+form.addEventListener("submit", handleSubmit);
 
 // エラー表示用関数
 const createError = (elem, errorMessage) => {

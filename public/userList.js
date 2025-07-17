@@ -1,6 +1,6 @@
 import { BASE_API_URL } from "./common.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+const onDomLoaded = () => {
   const status = document.getElementById("status");
   const list = document.getElementById("userList");
   const fragment = document.createDocumentFragment();
@@ -35,5 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(() => {
       status.textContent = "データの取得に失敗しました（リトライ上限）";
+      status.classList.add("error");
     });
-});
+};
+
+document.addEventListener("DOMContentLoaded", onDomLoaded);
